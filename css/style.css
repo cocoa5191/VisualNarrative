@@ -194,3 +194,16 @@ footer {
   cursor: pointer;
   z-index: 1000;
 }
+#applicationButton {
+  position: fixed;
+  bottom: 6vw;
+  left: 2vw;
+  padding: 1vw 2vw;
+  font-size: 1.2vw;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  z-index: 1000;
+}

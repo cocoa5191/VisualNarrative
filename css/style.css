@@ -3,6 +3,7 @@
   src: url("../fonts/TimesNewArialVF.woff2");
   font-variation-settings: "srff" 100, "ital" 0, "wght" 70;
 }
+
 html,
 body {
   background: #fff;
@@ -209,6 +210,55 @@ footer {
   z-index: 1000;
 }
 
+.googleSheetContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.8vw;
+  margin: 2vw auto 0;
+  max-width: 65vw;
+  padding-top: 1.6vw;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  overflow-x: auto;
+}
+
+.googleSheetContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  border-top: 2px dashed #000;
+}
+
+.googleSheetContainer .googleSheetTab {
+  position: static;
+  flex: 0 0 auto;
+  width: 3.4vw;
+  min-height: 11vw;
+  padding: 0.4vw 0.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #0052ff;
+  border: 1px solid #000;
+  border-top: none;
+  font-size: 0.95vw;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 980px) {
   .marquee-container {
     padding: 16px;
@@ -245,7 +295,7 @@ footer {
   #applicationButton {
     padding: 12px 18px;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 0px;
     bottom: 72px;
   }
 
@@ -256,6 +306,25 @@ footer {
 
 @media (max-width: 600px) {
 
+  .googleSheetContainer {
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 24px auto 0;
+    max-width: 100%;
+    padding-top: 24px;
+  }
+
+  .googleSheetContainer::before {
+    left: 0;
+    right: 0;
+  }
+
+  .googleSheetContainer .googleSheetTab {
+    width: 48px;
+    min-height: 36vw;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+  }
 
 
   .marquee-container {
@@ -263,7 +332,7 @@ footer {
   }
 
   .title {
-    font-size: 0.95rem;
+    font-size: 0.5rem;
   }
 
   .floor > div:not(#ground) {
@@ -281,21 +350,40 @@ footer {
     width: calc(100% - 48px);
     max-width: 320px;
   }
+ #titleText {
+    position: relative; 
+  
+    margin-top: 24px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+  #deadlineText {
+    padding: 0px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
   #explanationText {
-    padding: 12px 24px;
+ 
+    padding: 0px 42px;
     font-size: 14px;
+    margin-bottom: 20px;
   }
-  #GoogleSheet {
-    font-size: 16px;
-    bottom: 132px;
-    padding: 8px;
-    width: fit-content;
-  }
+
 
   #applicationButton {
     bottom: 84px;
   }
-
+  #appGraphic img {
+    position: relative;
+    left: 25vw;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 50vw;
+    height: fit-content;
+  }
   footer {
     height: 56px;
   }
